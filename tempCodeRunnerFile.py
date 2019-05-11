@@ -1,0 +1,1 @@
+ > div > div:nth-child(1) > span.txt_issue > a
