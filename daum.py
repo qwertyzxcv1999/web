@@ -3,10 +3,12 @@ from bs4 import BeautifulSoup
 
 req = requests.get('https://www.daum.net/')
 soup=BeautifulSoup(req.text,'html.parser') 
-s=soup.find_all("span",{'class':'txt_issue'})
-a=1
-for i in s:
+s=soup.select(" ol.list_hotissue > li > div")[1].select("span")[1]
 
-    print(a,"위",i.text)
+a=1
+for i in s.findAll('span'):
+    print(i.text)
     a=a+1
+
+
     
