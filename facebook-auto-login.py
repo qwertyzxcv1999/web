@@ -6,9 +6,9 @@ options.add_argument("--disable-notifications")
 
 driver = webdriver.Chrome(options=options)
 driver.get('https://www.facebook.com/')
-driver.find_element_by_name('email').send_keys('01094864369')
+driver.find_element_by_name('email').send_keys('아이디')
 time.sleep(5)
-driver.find_element_by_name('pass').send_keys('han990728!')
+driver.find_element_by_name('pass').send_keys('비밀번호')
 time.sleep(5)
 driver.find_element_by_id('loginbutton').click()
 
