@@ -13,7 +13,7 @@ k=soup1.select( 'dl > dt > a')
 k=set(k)
 k=list(k)
 
-
+a=0
 star=soup1.find("span",attrs={"id":"topPointTotalNumber"})
 
 for link in k:
@@ -29,14 +29,14 @@ for link in k:
         name=i.text
         print(name[13:20])
     
-    a=0
-    starpoint=star[a]
+    
+   
     
     for i in titlename:
-
+        starpoint=star[a]
         print(i.text,starpoint.text)
-        a=a+1 
-
+        if a <8:
+            a=a+1 
 
 
 

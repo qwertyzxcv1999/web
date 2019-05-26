@@ -2,11 +2,11 @@ import requests
 from bs4 import BeautifulSoup
 
 a="1"
-b="https://comic.naver.com/webtoon/list.nhn?titleId=183559&weekday=mon&page="
-c="https://comic.naver.com/webtoon/list.nhn?titleId=183559&weekday=mon&page=1"
+b="https://comic.naver.com/webtoon/detail.nhn?titleId=316909&no="
+c=b+a
 req = requests.get(c)
 d=int(a)
-while d<50 :
+while d<248 :
     c=b+a
     req = requests.get(c)
     soup=BeautifulSoup(req.text,'html.parser') 
